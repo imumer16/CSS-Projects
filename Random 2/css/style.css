@@ -1,0 +1,27 @@
+body {
+  background-image: url("https://ak.picdn.net/shutterstock/videos/1067212270/thumb/1.jpg");
+}
+.image {
+  animation-name: example;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: backwards;
+  position: absolute;
+  top: 40%;
+}
+
+p {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-align: center;
+  font-size: 100px;
+}
+
+@keyframes example {
+  0% {
+    left: -25%;
+  }
+
+  100% {
+    left: 100%;
+  }
+}
