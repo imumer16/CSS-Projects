@@ -1,0 +1,151 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: #181818;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.eye{
+    width: 40em;
+    height: 40em;
+    background:white;
+    position:absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%) rotate(45deg);
+    border-radius: 70% 0;
+}
+
+.sharingan{
+    background: red;
+    width:18.5em;
+    height: 18.5em;
+    position:relative;
+    top:27%;
+    left: 27%;
+    border: 5px black solid;
+    animation:
+        spin 5s ease-in-out infinite,
+        spin 5s ease-in-out infinite;
+}
+
+.sharingan .inner-ring{
+    content:"";
+    position:absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 10.7em;
+    height: 10.7em;
+    border: 5px black solid;
+}
+
+.sharingan,
+.circle,
+.inner-ring{
+    border-radius: 50%;
+}
+
+.tomoe {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 70px solid black;
+}
+
+.sharingan .tomoe:nth-child(1){
+    top: 5.7em;
+    left: 5em;
+    transform: translateX(-50%);
+}
+
+
+.sharingan .tomoe:nth-child(2){
+    top: 2.8em;
+    left: 0.5em;
+    transform: rotate(93deg);
+}
+
+
+
+.sharingan .tomoe:nth-child(3){
+    top: 2.8em;
+    right: 0.5em;
+    transform: rotate(-93deg);
+}
+
+.sharingan .tomoe:nth-child(4){
+    top: 0.3em;
+    right: 3.2em;
+    transform: rotate(-180deg);
+}
+
+.sharingan .tomoe:nth-child(5){
+    top: -4em;
+    left: 5em;
+    transform: translateX(-50%);
+}
+
+
+.sharingan .tomoe:nth-child(6){
+    top: 2.7em;
+    left: 10.1em;
+    transform: rotate(90deg);
+}
+
+
+
+.sharingan .tomoe:nth-child(7){
+    top: 2.7em;
+    right: 10.1em;
+    transform: rotate(-90deg);
+}
+
+.sharingan .tomoe:nth-child(8){
+    top: 9.9em;
+    right: 3.2em;
+    transform: rotate(-180deg);
+}
+.sharingan .circle{
+    position: relative;
+     width:2em;
+     height: 2em;
+     top:40%;
+     left: 40%;
+    background:black;
+    }
+    
+
+@keyframes spin{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes shine{
+    0%{
+        background: #e41414;
+        opacity: 0;
+    }
+    50%{
+        background: #f03a3a;
+        box-shadow: 0 0 4px 4px #f03a3a;
+    }
+    100%{
+        box-shadow: none;
+        background: #e41414;
+        opacity: 1;
+    }
+}
