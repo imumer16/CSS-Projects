@@ -1,0 +1,51 @@
+*{ margin: 0; padding: 0; box-sizing: border-box; }
+body{   
+    display: flex; justify-content: center;
+    align-items: center; min-height: 100vh; background: #111;
+}
+#wrapD3Cube {
+    width: 400px; height: 400px; margin: 40px auto;    
+}
+#D3Cube {
+    width: 224px; height: 225px; top: 50px; transform-style: preserve-3d;
+    transform: rotateX(-22deg) rotateY(-38deg) rotateZ(0deg);
+    margin: auto;   position: relative;
+    transform-style: preserve-3d;   transition: all 0.5s ease-in-out;
+}
+#D3Cube > div {
+    position: absolute; transition: all 0.5s ease-in-out;   width: 224px; height: 224px;
+    float: left;    overflow: hidden; opacity: 0.85;
+}
+#side1 {
+    transform: rotatex(90deg) translateX(0px) translateY(0px) translateZ(112px);
+    background: rgb(63, 144, 77);
+}
+#side2 {
+    transform: rotateY(-90deg) translateX(0px) translateY(0px) translateZ(112px);
+    background: rgb(116, 131, 39);
+}
+#side3 {
+    transform: translateX(0px) translateY(0px) translateZ(112px);
+    background: rgb(129, 77, 54);
+}
+#side4 {
+    transform: rotateY(90deg) translateX(0px) translateY(0px) translateZ(112px);
+    background: rgb(131, 39, 39);
+}
+#side5 {
+    transform: rotateY(180deg) translateX(0px) translateY(0px) translateZ(112px);
+    background: rgb(57, 39, 131);
+}
+#side6 {
+    transform: rotateX(-90deg) translateX(0px) translateY(0px) translateZ(112px);
+    background: rgb(39, 131, 117);
+}
+#D3Cube {   animation: cubeRotation 8s infinite; }
+
+@keyframes cubeRotation {
+    0%   {  transform: rotateX(-22deg) rotateY(-38deg) rotateZ(0deg);   }
+    25%   { transform: rotateX(-22deg) rotateY(-238deg) rotateZ(0deg);  }
+    50%   {    transform: rotateX(-38deg) rotateY(-398deg) rotateZ(0deg);  }
+    75%   {    transform: rotateX(-238deg) rotateY(-398deg) rotateZ(0deg);  }
+    100%   {    transform: rotateX(-22deg) rotateY(-398deg) rotateZ(0deg);  }
+}
