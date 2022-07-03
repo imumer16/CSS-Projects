@@ -1,0 +1,121 @@
+*{ margin: 0; padding: 0; box-sizing: border-box; }
+
+body{   display: flex; justify-content: center;
+        align-items: center; min-height: 100vh; background: #111;
+}
+
+.container{
+    position: relative; 
+    height: 90vh;
+    width: 90vh;
+    border-radius: 50%;
+    border: 2px #24ecff88 solid;
+    display:flex; 
+    justify-content: center; 
+    align-items: center;
+    animation: animate1 4s linear infinite; 
+}
+
+.container .circle{
+    position: relative;
+    left:   47.3%;
+    width: 50px; 
+    height:50px; 
+    border-radius: 50%; 
+    background-color: #24ecff88;
+    box-shadow: 0 0 0 5px #24ecff55,
+    0 0 0 10px #24ecff44,
+    0 0 0 15px #24ecff33,
+    0 0 0 20px #24ecff22,
+    0 0 0 25px #24ecff11;
+    animation: animate 4s linear infinite; 
+}
+
+.container .ring{
+    position: relative;
+    left: 37.3%;
+    width: 11vh;
+    height:89.2vh;
+    border-radius:50%;
+    border: 1px solid #24ecff;
+
+}
+
+.container .ring::before
+{
+    content:'';
+    position:absolute;
+    top: 348px;
+    right: 40px;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background:#24ecff;
+    box-shadow: 0 0 0 2px #24ecff55;
+
+    
+    animation: animate2 4s linear infinite; 
+}
+
+
+.container .ring:nth-child(2){
+    left: 38.67%; 
+
+}
+.container .ring:nth-child(3){
+    transform:rotate(90deg);
+    left: 26.8%; 
+    
+}
+
+
+.container .ring:nth-child(4){
+    transform:rotate(45deg);
+    left: 15%; 
+}
+
+.container .ring:nth-child(5){
+    transform:rotate(135deg);
+    left: 2.9%; 
+}
+
+.container .ring:nth-child(6){
+    transform:rotate(270deg);
+    left: -8.7%; 
+    
+}
+.container .ring:nth-child(7){
+    transform:rotate(315deg);
+    left:-20.7%; 
+}
+.container .ring:nth-child(8){
+    transform:rotate(225deg);
+    left: -32.33%; 
+
+}
+.container .ring:nth-child(9){
+  transform:rotate(180deg);
+    left: -44.1%;
+
+}
+
+@keyframes animate1{
+    0%{ transform: rotate(0deg); }
+    100%{ transform: rotate(360deg); }
+}
+
+
+
+@keyframes animate{
+    50%{ background-color: transparent; box-shadow:none; }
+    100%{ background-color: #24ecff88; }
+}
+
+@keyframes animate2{
+   0% {
+      transform: rotate(0deg) translateX(-30px) rotate(0deg);
+   }
+   100% {
+      transform: rotate(360deg) translateX(-30px) rotate(-360deg);
+   }
+}
