@@ -1,0 +1,21 @@
+*{ margin: 0; padding: 0; box-sizing: border-box; }
+body{ display: flex; justify-content: center;
+  align-items: center; min-height: 100vh; background: #111;
+}
+.circle{  width: 100px; height:100px; background-color:rgb(40, 222, 134);
+  animation:animate 4s ease-out infinite;
+}
+@keyframes animate {
+  0%{  transform: rotate(0deg); }
+  50%{  transform: rotate(360deg);
+    box-shadow:rgb(222, 61, 40) 100px -100px 0px -30px,
+  rgb(222, 161, 40) -100px 100px 0px -30px,
+  rgb(213, 222, 40) -100px -100px 0px -30px,
+  rgb(40, 222, 216) 100px 100px 0px -30px,
+  rgb(40, 46, 222)100px 0px 0px -30px,
+  rgb(104, 40, 222) -100px 0px 0px -30px,
+  rgb(180, 40, 222) 0px -100px 0px -30px,
+  rgb(222, 40, 76) 0px 100px 0px -30px; 
+  }
+  100%{  transform: rotate(0deg); box-shadow: none;}
+}
