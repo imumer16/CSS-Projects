@@ -1,0 +1,18 @@
+*{ margin: 0; padding: 0; box-sizing: border-box; }
+body{ display: flex; justify-content: center;
+  align-items: center; min-height: 100vh; background: #111;
+}
+.circle,.semi{ margin: 15px;border-radius: 50%;position: absolute; }
+.circle{width: 50px; height:50px;background-color:rgb(49, 40, 222); top: 48vh;}
+.semi{ width: 100px; height:100px;top: 45vh; border-top: 15px solid black; 
+  animation:animate 5s ease-in-out infinite;
+}
+.semi:nth-child(2){ top: 42vh; width: 150px; height:150px; animation-delay: 0.5s; }
+.semi:nth-child(3){ top: 39vh; width: 200px; height:200px; animation-delay: 1s; }
+.semi:nth-child(4){ top: 36vh; width: 250px; height:250px; animation-delay: 1.5s; }
+.semi:nth-child(5){ top: 33vh; width: 300px; height:300px; animation-delay: 2s; }
+.semi:nth-child(6){ top: 30vh; width: 350px; height:350px; animation-delay: 2.5s; }
+@keyframes animate {
+  50%{  border-top: 15px solid rgb(49, 40, 222); }
+  100%{  border-top: 15px solid black; }
+}
