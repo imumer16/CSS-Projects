@@ -1,0 +1,23 @@
+*{ margin: 0; padding: 0; box-sizing: border-box; }
+body{ display: flex; justify-content: center;
+  align-items: center; min-height: 100vh; background: #111;
+}
+.line{ width: 350px; height: 3px; background-color: #7fffd4;
+  box-shadow: #7fffd455 0px 2px ; border-radius: 50%; 
+}
+.circle{ margin: 15px; border-radius: 50%; position: relative; right:300px;
+top:-33.5px; width: 50px; height:50px; animation:animate 2s ease-out infinite; }
+.circle:nth-child(2){ background-color:rgb(40, 222, 134);
+  box-shadow:rgb(40, 222, 134.5) 0px 3px 25px 0px; 
+}
+.circle:nth-child(3){ background-color:rgb(222, 40, 207);
+  box-shadow:rgb(222, 40, 207.5) 0px 3px 25px 0px ; animation-delay: 0.3s;  
+}
+.circle:nth-child(4){ background-color:rgb(161, 222, 40);
+  box-shadow:rgb(161, 222, 40.5) 0px 3px 25px 0px ;animation-delay: 0.5s;
+}
+@keyframes animate {
+  0%{  top: -28px; }
+  50%{  top: -200px; }
+  100%{  top: -28px; }
+}
