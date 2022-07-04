@@ -1,0 +1,25 @@
+*{ margin: 0; padding: 0; box-sizing: border-box; }
+body{ display: flex; justify-content: center;
+  align-items: center; min-height: 100vh; background: #111;
+}
+.circle{  width: 50px; height:50px; border-radius: 50%;
+  background-color:rgb(40, 223, 208); position: absolute;
+}
+.circle:nth-child(1){ animation:child-1 4s ease-out infinite;}
+.circle:nth-child(2){ animation:child-2 4s ease-out infinite;}
+.circle:nth-child(3){ animation:child-3 4s ease-out infinite;}
+.circle:nth-child(4){ animation:child-4 4s ease-out infinite;}
+.circle:nth-child(5){ animation:child-5 4s ease-out infinite;}
+.circle:nth-child(6){ animation:child-6 4s ease-out infinite;}
+.circle:nth-child(7){ animation:child-7 4s ease-out infinite;}
+.circle:nth-child(8){ animation:child-8 4s ease-out infinite;}
+.circle:nth-child(9){ animation:child-big 4s ease-out infinite;}
+@keyframes child-1 { 50% { transform: translate(-112.5%, -112.5%); } }
+@keyframes child-2 { 50% { transform: translate(0, -112.5%); } }
+@keyframes child-3 { 50% { transform: translate(112.5%, -112.5%); } }
+@keyframes child-4 { 50% { transform: translate(112.5%, 0);} }
+@keyframes child-5 { 50% { transform: translate(112.5%, 112.5%); } }
+@keyframes child-6 { 50% { transform: translate(0, 112.5%); } }
+@keyframes child-7 { 50% { transform: translate(-112.5%, 112.5%); } }
+@keyframes child-8 { 50% { transform: translate(-112.5%, 0); } }
+@keyframes child-big { 50% { transform: scale(2); } }
