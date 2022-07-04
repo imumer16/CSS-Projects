@@ -1,0 +1,26 @@
+*{ margin: 0; padding: 0; box-sizing: border-box; }
+body{ display: flex; justify-content: center;
+  align-items: center; min-height: 100vh; background: #111;
+}
+.circle{  width: 100px; height:100px; border-radius: 50%;
+  background-color:rgb(104, 40, 222.5);
+  box-shadow:rgb(40, 141, 223.5) 30px -30px 20px -30px,
+  rgb(190, 40, 223.5) -30px 30px 10px -30px,
+  rgb(40, 223, 211.5) 0px -50px 10px -30px,
+  rgb(152, 222, 40.5)-50px 0px  10px -30px,
+  rgb(223, 174, 40.5) 50px 0px 10px -30px,
+  rgb(223, 40, 40.5) 0px 50px 10px -30px,
+  rgb(40, 223, 162.5) 30px -30px 10px -30px,
+  rgb(225, 98, 237) -30px -30px 10px -30px,
+  rgb(167, 72, 111) 30px 30px 10px -30px; 
+  animation:animate 4s ease-out infinite;
+}
+
+
+@keyframes animate {
+  0%{transform: rotate(360deg);}
+  50%{box-shadow: none;}
+  100%{transform: rotate(0deg);}
+}
+
+
