@@ -1,0 +1,23 @@
+*{ margin: 0; padding: 0; box-sizing: border-box; }
+body{ display: flex; justify-content: center;
+  align-items: center; min-height: 100vh; background: #111;
+}
+.line, .box{  position: relative; transform:rotate(-45deg); }
+.line{  width:300px; height: 5px; background-color: aquamarine; }
+.box{  width: 50px; height:50px; border-radius: 15%;
+  border: 5px solid aquamarine; left: -200px;
+  animation: animate 3s linear infinite ;
+}
+@keyframes animate {
+   0% { transform: translate(0, -1em) rotate(-45deg); }
+   5% { transform: translate(0, -1em) rotate(-50deg); }
+  20% { transform: translate(1em, -2em) rotate(47deg); }
+  25% { transform: translate(1em, -2em) rotate(45deg); }
+  30% { transform: translate(1em, -2em) rotate(40deg); }
+  45% { transform: translate(2em, -3em) rotate(137deg); }
+  50% { transform: translate(2em, -3em) rotate(135deg); }
+  55% { transform: translate(2em, -3em) rotate(130deg); }
+  70% { transform: translate(3em, -4em) rotate(217deg); }
+  75% { transform: translate(3em, -4em) rotate(220deg); }
+  100% { transform: translate(0, -1em) rotate(-225deg); }
+}
