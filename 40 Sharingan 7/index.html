@@ -1,0 +1,162 @@
+<html>
+<head>
+<style>
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: #181818;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.eye{
+  display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 400px;
+    height: 400px;
+    background:white;
+    position:absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%) rotate(45deg);
+    border-radius: 70% 0;
+}
+.sharingan {
+  position: absolute;
+  left: 50%;
+  margin-left: -108px;
+  top: 50%;
+  margin-top: -108px;
+  animation: animate 4s ease-in-out infinite;
+}
+
+.outer-red-circle {
+  align-items: center;
+  background-image: radial-gradient(#660000, #c30000, #a00000);
+  border: 0.5em solid black;
+  border-radius: 50%;
+  box-shadow: 0 0 10px 5px #262626;
+  display: flex;
+  height: 230px;
+  justify-content: center;
+  width: 230px;
+  z-index: 1;
+}
+
+.ellipse {
+  background-color: black;
+  border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+  clip-path: inset(0 0 50% 0);
+  height: 216px;
+  position: absolute;
+  width: 70px;
+  z-index: 4;
+}
+
+.ellipse.right {
+  transform: rotate(0.333turn);
+}
+
+.ellipse.left {
+  transform: rotate(-0.333turn);
+}
+
+.inner-circle {
+  background-image: radial-gradient(#b90000, #a00000);
+  border-radius: 50%;
+  clip-path: inset(0 0 30% 50%);
+  height: 124px;
+  margin-left: 15px;
+  margin-top: 4px;
+  position: absolute;
+  width: 124px;
+  z-index: 3;
+}
+
+.outer-circle {
+  background-color: black;
+  border-radius: 50%;
+  clip-path: inset(0 0 35% 60%);
+  height: 205px;
+  margin-bottom: 5px;
+  margin-right: 35px;
+  position: absolute;
+  width: 183px;
+  z-index: 2;
+}
+
+.inner-circle.two {
+  margin: 0;
+  margin-top: 12px;
+  margin-right: 5px;
+  transform: rotate(0.333turn);
+}
+
+.outer-circle.two {
+  margin: 0;
+  margin-bottom: 30px;
+  margin-left: 20px;
+  transform: rotate(0.333turn);
+}
+
+.inner-circle.three {
+  margin: 0;
+  margin-bottom: 15px;
+  margin-right: 5px;
+  transform: rotate(-0.333turn);
+}
+
+.outer-circle.three {
+  margin: 0;
+  margin-left: 15px;
+  margin-top: 30px;
+  transform: rotate(-0.333turn);
+}
+
+.inner-red-circle {
+  background-color: #a00000;
+  border-radius: 50%;
+  height: 40px;
+  position: absolute;
+  width: 40px;
+  z-index: 5;
+}
+
+@keyframes animate{
+  100%{transform:rotate(360deg);}
+}
+
+</style>
+
+</head>
+<body>
+  <div class="eye">
+  <div class="sharingan">
+    <div class="outer-red-circle">
+      <div class="ellipse top"></div>
+      <div class="ellipse right"></div>
+      <div class="ellipse left"></div>
+      <div class="inner-circle one"></div>
+      <div class="outer-circle one"></div>
+      <div class="inner-circle two"></div>
+      <div class="outer-circle two"></div>
+      <div class="inner-circle three"></div>
+      <div class="outer-circle three"></div>
+      <div class="inner-red-circle"></div>
+    </div>
+  </div>
+</div>
+</body>
+
+
+</html>
+
+
