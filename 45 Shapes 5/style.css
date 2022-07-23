@@ -1,0 +1,65 @@
+*{ margin: 0; padding: 0; box-sizing: border-box; }
+body{ display: flex; justify-content: center;
+  align-items: center; height: 100vh; background: #111;
+  width:100%; 
+}
+
+
+
+
+.container{
+  width: 400px;
+  height:400px;
+  border:3px solid white;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: center;
+  overflow: hidden;
+  position: absolute;
+}
+
+
+.c2
+{
+  border-radius: 100px;
+  transform:rotate(90deg);
+}
+
+.ball{
+  width: 80px;
+  height:80px;
+  background: #605cd3;
+  border-radius: 50%; 
+  box-shadow: 0px 0px 5px 15px #605cd333;
+}
+
+#A1{
+  animation: animte1 4s ease-in-out infinite;
+}
+#A2{
+
+  animation: animte2 4s ease-in-out infinite;
+}
+
+
+@keyframes animte1{
+  50%{
+    transform:translate(250px) scale(0.3);
+  }
+
+  100%{
+    transform: translate(0px) scale(1) rotate(180deg);
+  }
+
+}
+
+@keyframes animte2{
+  50%{
+    transform: translate(-250px) scale(0.3);
+  }
+
+  100%{
+    transform: translate(0px) scale(1);
+  }
+}
